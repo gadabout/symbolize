@@ -69,15 +69,15 @@ module Mongoid
         attr_names.each do |attr_name|
 
           if enum # Enumerators
-            enum_hash = \
-            if enum.is_a?(Hash)
-              enum
-            else # Maps [:a, :b, :c] -> {a: 'A', ...
-              enum.each_with_object({}) do |e, a|
-                a.store(e.respond_to?(:to_sym) ? e.to_sym : e,
-                        capitalize ? e.to_s.capitalize : e.to_s)
+            enum_hash =
+              if enum.is_a?(Hash)
+                enum
+              else # Maps [:a, :b, :c] -> {a: 'A', ...
+                enum.each_with_object({}) do |e, a|
+                  a.store(e.respond_to?(:to_sym) ? e.to_sym : e,
+                          capitalize ? e.to_s.capitalize : e.to_s)
+                end
               end
-            end
 
             #
             # Creates Mongoid's 'field :name, type: type, :default'

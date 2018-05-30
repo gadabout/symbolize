@@ -1,15 +1,14 @@
 en:
-  activerecord:
-    attributes:
+  mongoid:
     symbolizes:
-      user:
+      person:
         language:
           pt: Portuguese
           en: English
         sex:
           "true": Female
           "false": Male
-      user_skill:
+      person_skill:
         kind:
           magic: Magic
           agility: Agility
