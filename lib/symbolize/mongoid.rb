@@ -63,7 +63,7 @@ module Mongoid
         validation     = configuration[:validate] != false
         default_option = configuration[:default]
 
-        field_type     = configuration[:type] || Symbol
+        field_type     = configuration[:type] || String
         enum           = [true, false] if [Boolean, ::Boolean].include?(field_type)
 
         attr_names.each do |attr_name|

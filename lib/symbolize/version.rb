@@ -1,3 +1,3 @@
 module Symbolize
-  VERSION = '5.0.0.peek1'
+  VERSION = '5.1.0.peek1'
 end
